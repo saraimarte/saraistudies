@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import backarrow from '../assets/icons/backarrow.svg';
+import rightarrow from '../assets/icons/rightarrow.svg';
+
+---
+
+<div class = "arrows">
+    <Image class = "circle" src = {backarrow} alt = ""/> 
+    <Image class = "circle" src = {rightarrow} alt = ""/> 
+</div>
+
+<style>
+    .arrows{
+        display: flex;
+        gap:0.2em;
+    }
+    .circle{
+        box-sizing: border-box;
+        border: var(--border);
+        border-radius:50%;
+        width:33px;
+        height:33px;
+        padding:3px;
+}
+</style>
