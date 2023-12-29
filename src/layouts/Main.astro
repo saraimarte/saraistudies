@@ -3,7 +3,9 @@ import { Image } from "astro:assets";
 
 import Arrows from '../components/Arrows.astro';
 import Nav from '../components/Nav.astro';
-import ClassNav from '../components/ClassNav.astro';
+import BottomNav from '../components/BottomNav.astro';
+import Search from '../components/Search.astro';
+
 ---
 
 <!doctype html>
@@ -17,20 +19,17 @@ import ClassNav from '../components/ClassNav.astro';
 		<title>Astro</title>
 	</head>
 	<body>
-
         <div class = "container">
             <nav>
                 <Arrows/>
-                
                 <h1> sarai studies </h1>
+                <Search/>
                 <Nav/>
-              
-            </nav>
-            <div class = "content">
-            </div>
-
-            <ClassNav/>
-        
+            </nav> 
+            <slot> </slot>
+           
+            <BottomNav/>
+        </div>
 	</body>
 </html>
 
@@ -79,9 +78,7 @@ import ClassNav from '../components/ClassNav.astro';
         height:942px;
         width:1353px;
     }
-    .content{
-        height:852px;
-    }
+ 
     nav{
         border-bottom:var(--border);
         height:45px;

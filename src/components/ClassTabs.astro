@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import faccounting from '../assets/icons/faccounting.svg';
+import calc1 from '../assets/icons/calc1.svg';
+import calc2 from '../assets/icons/calc2.svg';
+import facc from '../assets/icons/facc.svg';
+import macc from '../assets/icons/macc.svg';
+import macro from '../assets/icons/macro.svg';
+import micro from '../assets/icons/micro.svg';
+import stats from '../assets/icons/stats.svg';
+import Home from '../assets/icons/Home.svg';
+
+---
+
+
+    <div class = "classIcons">
+        
+    <div class = "class">
+        <Image src = {Home} alt = ""/> 
+    </div>
+        <div class = "class">
+            <Image src = {facc} alt = ""/>  
+        </div>
+        <div class = "class">
+            <Image src = {macc} alt = ""/> 
+        </div>
+        <div class = "class">
+            <Image src = {calc1} alt = ""/> 
+        </div>
+        <div class = "class">
+            <Image src = {calc2} alt = ""/> 
+        </div>
+        <div class = "class">
+            <Image src = {micro} alt = ""/> 
+        </div>
+        <div class = "class">
+            <Image src = {macro} alt = ""/> 
+        </div>
+        <div class = "class">
+            <Image src = {stats} alt = ""/> 
+        </div>
+    
+    </div>
+   
+
+
+<style>
+    .classIcons{
+        display: flex;
+    }
+     .class{
+        border-right:var(--border);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:67.68px;
+        height:43px;
+    }
+</style>

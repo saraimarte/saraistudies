@@ -6,9 +6,9 @@ import x from '../assets/icons/x.svg';
 <div class = "navLinks">
     <ul>
         <li>
-            <a class = "navItem" href = "/"> Home </a>
-            <a class = "navItem" href = "/studyguides"> Study Guides </a>
-            <a class = "navItem" href = "/about"> About </a>
+            <a class = "navItem" href = "/"> home </a>
+            <a class = "navItem" href = "/studyguides"> study guides </a>
+            <a class = "navItem" href = "/about"> about </a>
             <Image id = "navItem" src = {x} alt = ""/> 
 
         </li>
@@ -18,15 +18,16 @@ import x from '../assets/icons/x.svg';
 
 <style>
    .navLinks{
-    height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height:100%;
    }
 
    ul li{
     list-style:none;
     display: flex;
+    gap:0.5em;
 
    }
 
@@ -37,7 +38,11 @@ import x from '../assets/icons/x.svg';
     font-weight:400;
     font-size:var(--text-xl);
     border: var(--border);
-    padding:0 5px;
+    padding:0 20px;
+    height: 31.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    }
 </style>
 
