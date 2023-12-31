@@ -1,14 +1,24 @@
 ---
 import Main from '../layouts/Main.astro';
+import underConstruction from '../assets/underConstruction.jpg';
+import {Image} from "astro:assets";
 ---
 <Main>
 	<div class = "content">
 		<h1 class = "title"> a collection of study guides for classes iv'e taken at rutgers. </h1>
-    
 	</div>
+	<Image id = "sign" src = {underConstruction} alt = "" />
 </Main>
 
 <style>
+
+	#sign{
+		position:absolute;
+		top:50px;
+		left:50px;
+		height:200px;
+		width:200px;
+	}
 	.content{
         height:852px;
 		overflow:hidden;
