@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import ClassTabs from './ClassTabs.astro';
+import Date from './Date.astro';
+---
+<div class = "classes">
+    <ClassTabs/> 
+    <Date/>
+</div>
+
+<style>
+    .classes{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-top:var(--border);
+        padding:0 20px;
+    }
+
+   
+
+</style>

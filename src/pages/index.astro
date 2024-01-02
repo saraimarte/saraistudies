@@ -1,8 +1,44 @@
 ---
-import Main from '../layouts/Main.astro';
 import underConstruction from '../assets/underConstruction.jpg';
 import {Image} from "astro:assets";
+import Main from '../layouts/Main2.astro';
 ---
+
+
+<Main>
+	<div class = "box">
+		<h1 class = "title">about</h1>
+		<p>a collection of survival guides for classes ive taken at rutgers.</p>
+	</div>
+	<div class = "box">
+		<h1 class = "title">how to use</h1>
+		<p>either search for a class up top or explore the class tabs at the bottom.</p>
+	</div>
+	<div class = "box">
+		<h1 class = "title" >prefer video?</h1>
+		<p>if you don't like reading and rather watch how i do things, check out my videos on sarai studies.</p>
+	</div>
+
+</Main>
+
+<style>
+
+	#logo, h1{
+        font-family: var(--primaryFont);
+        font-weight: 400;
+    }
+
+    .title{
+        font-family: var(--primaryFont);
+        text-decoration: underline;
+        font-size: var(--text-md);
+    }
+
+    p{
+        font-size: var(--text-lg);
+    }
+</style>
+<!--
 <Main>
 	<div class = "content">
 		<h1 class = "title"> a collection of study guides for classes iv'e taken at rutgers. </h1>
@@ -35,3 +71,5 @@ import {Image} from "astro:assets";
 
 	}
 </style>
+	
+ -->

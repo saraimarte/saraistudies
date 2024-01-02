@@ -1,22 +1,55 @@
 ---
-import { Image } from "astro:assets";
-import ClassTabs from './ClassTabs.astro';
-import Date from './Date.astro';
+import {Image} from "astro:assets";
+import Home from '../assets/icons/Home.svg';
+import facc from '../assets/icons/facc.svg';
+import macc from '../assets/icons/macc.svg';
+import calc1 from '../assets/icons/calc1.svg';
+import calc2 from '../assets/icons/calc2.svg';
+import micro from '../assets/icons/micro.svg';
+import macro from '../assets/icons/macro.svg';
+import stats from '../assets/icons/stats.svg';
 ---
-<div class = "classes">
-    <ClassTabs/> 
-    <Date/>
+
+<div class = "bottomNav">
+    <div class = "tab">
+        <a href="/"> <Image src={Home} alt="" /> </a>
+    </div>
+    <div class = "tab">
+        <a href="../../classes/FinancialAccounting/facc"> <Image src={facc} alt="" /> </a>
+    </div>
+    <div class = "tab">
+        <a href="../../classes/ManagerialAccounting/macc"> <Image src={macc} alt="" /> </a>
+    </div>
+    <div class = "tab">
+        <a href="../../classes/calc1/calc1"> <Image src={calc1} alt="" /> </a>
+    </div>
+    <div class = "tab">
+        <a href="../../classes/calc2/calc2"> <Image src={calc2} alt="" /> </a>
+    </div>
+    <div class = "tab">
+        <a href="../../classes/micro/micro"> <Image src={micro} alt="" /> </a>
+    </div>
+    <div class = "tab">
+        <a href="../../classes/macro/macro"> <Image src={macro} alt="" /> </a>
+    </div>
+    <div class = "tab">
+        <a href="../../classes/stats/stats"> <Image src={stats} alt="" /> </a>
+    </div>
 </div>
 
 <style>
-    .classes{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        border-top:var(--border);
-        padding:0 20px;
-    }
+.bottomNav{
+    display: flex;
+    width:100%;
+}
 
-   
+.tab{
+    border:var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    width:60px;
 
+}
 </style>
