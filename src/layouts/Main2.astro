@@ -4,6 +4,8 @@ import { Image } from "astro:assets";
 import x from '../assets/icons/x.svg';
 import '../styles/Global.css';
 import BottomNav from '../components/BottomNav.astro';
+const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
+
 ---
 
 <div class = "container">
@@ -17,15 +19,12 @@ import BottomNav from '../components/BottomNav.astro';
                 <div class = "row2">
                     <Search/>
                 </div>
-    
-            </div>
-            <div class = "content">
-                <slot></slot>
+                <div class = "content">
+                    <slot></slot>
+                </div>
                 
-            </div>
-            <BottomNav/>
-
-
+            </div>                
+                <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}></BottomNav>
         </div>
 
     </div>
@@ -44,6 +43,7 @@ import BottomNav from '../components/BottomNav.astro';
         display: flex;
         flex-direction: column;
         gap:1em;
+        align-items: center;
     }
 
     .row1{

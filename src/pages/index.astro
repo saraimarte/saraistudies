@@ -2,10 +2,19 @@
 import underConstruction from '../assets/underConstruction.jpg';
 import {Image} from "astro:assets";
 import Main from '../layouts/Main2.astro';
+
+const path1 = "classes/FinancialAccounting/facc";
+const path2 = "classes/ManagerialAccounting/macc";
+const path3 = "classes/Calc1/calc1";
+const path4 = "classes/Calc2/calc2";
+const path5 = "classes/Micro/micro";
+const path6 = "classes/Macro/macro";
+const path7 = "classes/Stats/stats";
+
 ---
 
 
-<Main>
+<Main path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
 	<div class = "box">
 		<h1 class = "title">about</h1>
 		<p>a collection of survival guides for classes ive taken at rutgers.</p>
