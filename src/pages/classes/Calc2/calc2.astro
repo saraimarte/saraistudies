@@ -9,8 +9,26 @@ const path5 = "../Micro/micro";
 const path6 = "../Macro/macro";
 const path7 = "../Stats/stats";
 
+const blogs = await Astro.glob('./*.md');
 ---
 
 <Main path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
-    calc2
+    <ol>
+        {blogs.map((post) => <li><a href = {post.url}>{post.frontmatter.title}</a></li>)}
+    </ol>
+
 </Main>
+
+
+<style>
+    a{
+        color:black;
+        font-family: var(--primaryFont);
+        font-size: large;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    ol{
+        margin:20px;
+    }
+</style>

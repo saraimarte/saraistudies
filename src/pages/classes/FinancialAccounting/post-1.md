@@ -1,6 +1,6 @@
 ---
-layout: "../../layouts/BlogPost.astro"
-title: Post 1 for calc
+layout: '../../../layouts/BlogPost.astro'
+title: Accounts
 date: 2023-11-20
 author: Sarai Marte
 ---
