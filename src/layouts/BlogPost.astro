@@ -12,18 +12,76 @@ const path7 = "../Stats/stats";
 
 const { frontmatter } = Astro.props;
 const {title, date, author} = frontmatter;
-
+import DirectoryComp from '../components/DirectoryComp.astro';
 ---
 
 <Main2 title = {title} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
-    <h1>{title}</h1>
-    <div class="content">
-        <slot></slot>
-    </div>
+   <div class = "post-content">
+        <div class = "header">
+            <h1 class = "title">{title}</h1>
+            <h1 class = "date">{date}</h1>
+        </div>
+
+        <div class="content">
+            <slot></slot>
+        </div>
+   </div>
+  
 </Main2>
 
 <style>
+    .post-content{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+    }
+    .date{
+        font-size:medium
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
     h1{
         font-family: var(--primaryFont);
+        font-weight: 400;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:1em;
+        flex-wrap: wrap;
+    }
+    .title, .date{
+        font-family: var(--primaryFont);
+        font-weight: 400;
+        margin-top:20px;
+    }
+    .icon{
+        position: relative;
+        top:10px;
+        width:13px;
+        height:13px;
+        border-radius: 50%;
+        border:var(--border);
+        display: block;
+
+    }
+    
+    @media only screen and (max-width:850px){
+        .title, .date{
+            font-size:larger;
+        }
+        .hide{
+            display:none;
+        }
+        .container{
+            flex-direction: column;
+            align-items: flex-start;
+            gap:0;
+            
+        }
+     
     }
 </style>

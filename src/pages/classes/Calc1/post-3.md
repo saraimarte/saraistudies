@@ -1,7 +1,7 @@
 ---
 layout: '../../../layouts/BlogPost.astro'
 title: Horizontal Tangent Lines
-date: 2023-11-20
+date: 01/05/2024
 author: Sarai Marte
 ---
 
