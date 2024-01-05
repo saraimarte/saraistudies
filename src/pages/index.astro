@@ -15,23 +15,33 @@ const path7 = "classes/Stats/stats";
 
 
 <Main path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
-	<div class = "box">
-		<h1 class = "title">about</h1>
-		<p>a collection of survival guides for classes ive taken at rutgers.</p>
+	<div class = "post-content">
+		<div class = "box">
+			<h1 class = "title">about</h1>
+			<p>a collection of survival guides for classes ive taken at rutgers.</p>
+		</div>
+		<div class = "box">
+			<h1 class = "title">how to use</h1>
+			<p>either search for a class up top or explore the class tabs at the bottom.</p>
+		</div>
+		<div class = "box">
+			<h1 class = "title" >prefer video?</h1>
+			<p>if you don't like reading and rather watch how i do things, check out my videos on sarai studies.</p>
+		</div>
 	</div>
-	<div class = "box">
-		<h1 class = "title">how to use</h1>
-		<p>either search for a class up top or explore the class tabs at the bottom.</p>
-	</div>
-	<div class = "box">
-		<h1 class = "title" >prefer video?</h1>
-		<p>if you don't like reading and rather watch how i do things, check out my videos on sarai studies.</p>
-	</div>
+	
 
 </Main>
 
 <style>
-
+	.post-content{
+		width:90%;
+        display: flex;
+        flex-direction: column;
+        gap:48px;
+        width:100%;
+	}
+	
 	#logo, h1{
         font-family: var(--primaryFont);
         font-weight: 400;
@@ -46,39 +56,6 @@ const path7 = "classes/Stats/stats";
     p{
         font-size: var(--text-lg);
     }
-</style>
-<!--
-<Main>
-	<div class = "content">
-		<h1 class = "title"> a collection of study guides for classes iv'e taken at rutgers. </h1>
-	</div>
-	<Image id = "sign" src = {underConstruction} alt = "" />
-</Main>
-
-<style>
-
-	#sign{
-		position:absolute;
-		top:50px;
-		left:50px;
-		height:200px;
-		width:200px;
-	}
-	.content{
-        height:852px;
-		overflow:hidden;
-    }
-
-	.title{
-		font-family:var(--primaryFont);
-        font-weight:400;
-        font-size:140px;
-		padding: 0 20px;
-		width:1200px;
-		position: relative;
-		bottom:70px;
-
-	}
-</style>
 	
- -->
+
+</style>
