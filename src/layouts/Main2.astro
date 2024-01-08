@@ -8,28 +8,42 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
 
 ---
 
-<div class = "container">
-    <div class = "screen">
-        <div class = "box1">
-            <div class = "top">
-                <div class = "row1">
-                    <h1 id = "logo"> sarai studies </h1>
-                    <Image id = "navItem" src = {x} alt = ""/> 
-                </div>
-                <div class = "row2">
-                    <Search/>
-                </div>
-                <div class = "content">
-                    <slot></slot>
-                </div>
-                
-            </div>                
-                <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}></BottomNav>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+    <div class = "container">
+        <div class = "screen">
+            <div class = "box1">
+                <div class = "top">
+                    <div class = "row1">
+                        <h1 id = "logo"> sarai studies </h1>
+                        <Image id = "navItem" src = {x} alt = ""/> 
+                    </div>
+                    <div class = "row2">
+                        <Search/>
+                    </div>
+                    <div class = "content">
+                        <slot></slot>
+                    </div>
+                    
+                </div>                
+                    <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}></BottomNav>
+            </div>
+
         </div>
 
-    </div>
-
 </div>
+</body>
+</html>
+
 
 <style>
 
@@ -92,18 +106,50 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
         width:100%;
     }
 
-   
-    .content{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        padding:0 20px;
-        /*this is the part that makes it scrollable*/
-        overflow-y: scroll;
-        position: relative;
-        top:10px;
-        height:460px;
+   .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+    /* This is the part that makes it scrollable */
+    overflow-y: scroll;
+    position: relative;
+    top: 10px;
+    height: 460px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); /* For Firefox */
+
+    /* Webkit (Chrome, Safari) scrollbar styling */
+    &::-webkit-scrollbar {
+        width: 10px; /* Set the width of the scrollbar */
     }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb); /* Set the color of the thumb */
+        border-radius: 5px; /* Optional: Round the thumb's corners */
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-track); /* Set the color of the track */
+        border-radius: 5px; /* Optional: Round the thumb's corners */
+
+    }
+
+    /* Optional: Handle scrollbar when it's in its inactive state */
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb-hover); /* Change thumb color on hover */
+        }
+    }
+}
+
+/* Define scrollbar colors as CSS variables */
+:root {
+    --scrollbar-thumb: #d6d6d6; /* Set the color of the scrollbar thumb */
+    --scrollbar-track: #f0f0f0; /* Set the color of the scrollbar track */
+    --scrollbar-thumb-hover: #a1a1a1; /* Set the color of the scrollbar thumb on hover */
+}
+
 
     
     /*when in desktop*/
