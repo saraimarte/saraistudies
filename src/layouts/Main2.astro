@@ -87,7 +87,6 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
     
     .top{
         width:100%;
-        height:min-content;
         display: flex;
         flex-direction: column;
         gap:1em;
@@ -108,17 +107,17 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
     }
 
    .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0 20px;
-    /* This is the part that makes it scrollable */
-    overflow-y: scroll;
-    position: relative;
-    top: 10px;
-    height: 460px;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); /* For Firefox */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+        /* This is the part that makes it scrollable */
+        overflow-y: scroll;
+        position: relative;
+        top: 10px;
+        height: 460px;
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); /* For Firefox */
 
     /* Webkit (Chrome, Safari) scrollbar styling */
     &::-webkit-scrollbar {
